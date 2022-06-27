@@ -70,6 +70,7 @@ def __get_pdf_from_html(path: str, timeout: int, install_driver: bool, print_opt
         calculated_print_options = {
             'landscape': False,
             'displayHeaderFooter': False,
+            'margin': {top: 0, left: 0, right: 0, bottom: 0},
             'printBackground': True,
             'preferCSSPageSize': True,
         }
