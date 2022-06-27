@@ -68,9 +68,10 @@ def __get_pdf_from_html(path: str, timeout: int, install_driver: bool, print_opt
        WebDriverWait(driver, timeout).until(staleness_of(driver.find_element(by=By.TAG_NAME, value='html')))
     except TimeoutException:
         calculated_print_options = {
+            'format': 'A4',
             'landscape': False,
             'displayHeaderFooter': False,
-            'margin': {top: 0, left: 0, right: 0, bottom: 0},
+            'margin': 0,
             'printBackground': True,
             'preferCSSPageSize': True,
         }
